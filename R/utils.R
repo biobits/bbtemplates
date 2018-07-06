@@ -24,7 +24,7 @@ pdf_document_format <- function(..., format, template, csl) {
   
   # base format
   fmt <- inherit_pdf_document(..., template = find_resource(format, template))
-  
+   
   # add csl to pandoc_args
   fmt$pandoc$args <- c(fmt$pandoc$args,
                        "--csl",

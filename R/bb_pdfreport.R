@@ -13,7 +13,7 @@
 #'   \item \code{subtitle} the subtitle
 #'
 #' @examples
-#'
+#' 
 #' \dontrun{
 #' library(rmarkdown)
 #' draft("MyArticle.Rmd", template = "bb_pdfreport", package = "bbtemplates")

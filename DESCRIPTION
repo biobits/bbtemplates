@@ -10,3 +10,4 @@ Description: A suite of custom R Markdown formats and templates for
 License: MIT
 Imports: utils, rmarkdown,  yaml, 
 RoxygenNote: 6.0.1
+

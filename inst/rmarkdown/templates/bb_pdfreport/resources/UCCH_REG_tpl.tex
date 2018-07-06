@@ -212,9 +212,12 @@ $endfor$
 \begin{document}
 %\sffamily
 $if(title)$
-% \maketitle %geändert für externe Titkepage
-%\input{F:/RDev/Daten/pandoc-templates/titleUCCH.tex}
-\input{titleUCCH.tex}
+
+$for(include-titlepage)$
+$include-titlepage$
+
+$endfor$
+%\input{titleUCCH.tex}
 \cleardoublepage
 $endif$
 $if(abstract)$

@@ -26,4 +26,3 @@ draft("MyArticle.Rmd", template = "bb_pdfreport", package = "bbtemplates")
 }
 
 }
- 

@@ -1,7 +1,7 @@
 Package: bbtemplates
 Type: Package
 Title: Custom biobits templates for R Markdown
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
   person("S", "Bartels", role = c("aut", "cre"), email = "email@biobits.eu")
   )
@@ -9,5 +9,4 @@ Description: A suite of custom R Markdown formats and templates for
   authoring reports and articles.
 License: MIT
 Imports: utils, rmarkdown,  yaml, 
-RoxygenNote: 6.0.1
-
+RoxygenNote: 6.1.0

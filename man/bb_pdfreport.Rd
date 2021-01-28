@@ -18,6 +18,9 @@ R Markdown output format to pass to
 \description{
 UCCH Core Biostatistics format.
 }
+\details{
+
+}
 \examples{
 
 \dontrun{

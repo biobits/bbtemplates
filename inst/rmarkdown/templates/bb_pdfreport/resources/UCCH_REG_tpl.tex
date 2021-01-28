@@ -1,23 +1,21 @@
 \documentclass[ openright,titlepage,fleqn,numbers=noenddot,headinclude,
-                10pt,a4paper,BCOR5mm,footinclude,cleardoublepage=empty,
+                10pt,a4paper,footinclude,cleardoublepage=empty,
                 ]{scrreprt}
 
- 
 \usepackage{lmodern}
 \usepackage{float} % für die Bilder
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-%\usepackage{ngerman,a4}	
 \usepackage{enumerate}
 \usepackage{longtable}
+
+\usepackage{calc} % for calculating minipage widths
 \usepackage{rotating}
 \usepackage{pdflscape}
 \usepackage[ngerman]{babel} 
 
-
 %% Fontselection goes here
-%\usepackage{libertine}
-\usepackage[defaultsans,osfigures,scale=0.95]{opensans}
+\usepackage[defaultsans,oldstyle,scale=0.95]{opensans}
 \usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,7 +28,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{geometry}
 \usepackage{xcolor}
-\usepackage{amsmath}
 \usepackage[some]{background}
 
 \definecolor{titlepagecolor}{HTML}{004992}
@@ -67,7 +64,6 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 % Titel Ende
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{fixltx2e} % provides \textsubscript
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -163,14 +159,14 @@ $endif$
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
             urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
             linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
-            pdfborder={0 0 0}
+            pdfborder={0 0 0},
             %eigenes zeug
             linktocpage=true, pdfstartpage=1, pdfstartview=FitV,
             breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,
             plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,
             hypertexnames=true, pdfhighlight=/O,
                pdfcreator={pdfLaTeX},%
-				pdfproducer={LaTeX with hyperref and oncosys-style}
+				pdfproducer={LaTeX with hyperref and biobits-style}
             }
 \urlstyle{same}  % don't use monospace font for urls
 $if(links-as-notes)$
@@ -241,11 +237,9 @@ $endif$
 
 %%%% Kopfzeile
 \pagestyle{scrheadings}
-%\automark[part]{part}
-%\automark*[section]{}
+
 \automark{section}
 \clearscrheadfoot
-%\ihead{{\leftmark}}
 \ohead{{\headmark}}
 \cfoot{{\pagemark}}
 %%%%%%% Kopfzeile ende
